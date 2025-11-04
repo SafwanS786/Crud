@@ -11,7 +11,7 @@ export default function StaticSection() {
   return (
     <div
       className="flex-1 flex flex-col justify-between gap-0 items-center p-2
-      sm:flex-col sm:gap-1 md:flex-row md:gap-2 md:p-2 lg:flex-row lg:w-full xl:flex-row 2xl:flex-col 2xl:gap-2 rounded-2xl shadow-sm border border-gray-100 xl:p-5"
+      sm:flex-col sm:gap-1 md:flex-row md:gap-2 md:p-2 lg:flex-row lg:w-full xl:flex-row 2xl:flex-col 2xl:gap-2 rounded-2xl shadow-sm border border-gray-100 xl:p-3"
     >
       <div className="flex flex-col items-center text-center">
         <div className="relative">
