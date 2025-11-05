@@ -106,7 +106,13 @@ export default function Sidebar() {
 
         <div className="flex-1 overflow-y-auto p-4">
           {/* Logo */}
-          <button onClick={() => navigate("/")} className="cursor-pointer">
+          <button
+            onClick={() => {
+              navigate("/");
+              closeSidebar();
+            }}
+            className="cursor-pointer"
+          >
             <div className="flex items-center gap-3 mb-8">
               <School className="w-8 h-8 text-purple-600" />
               <h1 className="text-2xl font-bold text-gray-800">Coursue</h1>

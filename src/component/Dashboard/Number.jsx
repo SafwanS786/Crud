@@ -12,6 +12,7 @@ export default function Counter() {
     setText(e.target.value);
   };
   useEffect(() => {
+    if (!show) return;
     const interval = setInterval(() => {
       setNumber((prev) => {
         if (prev < target) {
@@ -24,7 +25,7 @@ export default function Counter() {
     }, 100);
 
     return () => clearInterval(interval); // cleanup
-  }, []);
+  }, [show]);
 
   return (
     <>
@@ -41,7 +42,7 @@ export default function Counter() {
       <div className="bg-gray-300 rounded-lg p-1 inline-block">
         <input type="text" onChange={handletext} value={text} />
       </div>
-      <button onClick={() => setShow(false)}>{show ? "hide" : "show"}</button>
+      <button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</button>
       {console.log("show che", show)}
       {show && <p>{text}</p>}
       {/* {console.log("setShow", show)} */}

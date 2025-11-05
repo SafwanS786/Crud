@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import ConnectionPages from "./Pages/ConnectionPages";
 import Navbar from "./component/Navbar/Navbar";
 import DashboardPages from "./Pages/DashboardPages";
+import TaskPages from "./Pages/TaskPages";
 function App() {
   const { theme } = useTheme();
   return (
@@ -35,6 +36,7 @@ function App() {
                   <Routes>
                     <Route path="/" element={<HomePages />} />
                     <Route path="/dashboard" element={<DashboardPages />} />
+                    <Route path="/task" element={<TaskPages />} />
                   </Routes>
                 </div>
               </div>
