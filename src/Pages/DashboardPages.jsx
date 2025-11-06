@@ -14,7 +14,7 @@ export default function DashboardPages() {
         <div className="p-2 mt-6">
           <h1 className="font-bold text-gray-500 text-2xl">Crud Operation</h1>
         </div>
-        <TodoCrud />
+        {/* <TodoCrud /> */}
         <Crud />
       </div>
     </div>

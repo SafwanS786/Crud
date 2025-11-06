@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   CheckCircle2,
   Circle,
@@ -62,6 +62,32 @@ export default function UserTask() {
         return "bg-gray-100 text-gray-700";
     }
   };
+  useEffect(() => {
+    const student = [
+      { id: 1, name: "shaikh", age: 20 },
+      { id: 2, name: "safwan", age: 23 },
+      { id: 3, name: "Bhai", age: 26 },
+    ];
+    localStorage.setItem("PrcTask", JSON.stringify(student));
+    // let saved =localStorage.setItem("PrcTask", JSON.stringify(student));
+    // console.log("SavedData", saved);
+    const data = JSON.parse(localStorage.getItem("PrcTask"));
+    console.log("From localStorage:", data);
+  }, []);
+  useEffect(() => {
+    const studentCheck = [
+      { id: 1, name: "Yusuf", age: 20 },
+      { id: 2, name: "Khan", age: 23 },
+      { id: 3, name: "Bhai", age: 26 },
+    ];
+    localStorage.setItem("PrcTaskCheck", JSON.stringify(studentCheck));
+    // let saved =localStorage.setItem("PrcTask", JSON.stringify(student));
+    // console.log("SavedData", saved);
+    const datacheck = JSON.parse(localStorage.getItem("PrcTaskCheck"));
+    console.log("From localStorage DataCheck:", datacheck);
+    // localStorage.removeItem("PrcTaskCheck");
+    // localStorage.clear();
+  }, []);
   return (
     <div>
       <div className="w-full bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 lg:p-6">

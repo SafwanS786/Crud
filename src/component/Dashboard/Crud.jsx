@@ -31,6 +31,15 @@ export default function StudentCRUD() {
     setNewStudent({ ...newStudent, [name]: value });
   };
 
+  const obj = { a: 1, b: 2 };
+
+  const newObj = { ...obj, b: 6 };
+  console.log("object", newObj);
+
+  const a1 = [{ a: 1 }, { b: 2 }];
+  const a2 = [...a1, { c: 2 }];
+  console.log("Array", a2);
+
   // EDIT: Load student into form
   const handleEdit = (id) => {
     const studentToEdit = students.find((s) => s.id === id);
@@ -89,9 +98,9 @@ export default function StudentCRUD() {
       setStudents(students.filter((s) => s.id !== id));
     }
   };
-  const arr = [1, 2, 3];
-  let arr1 = [...arr, 4];
-  console.log("This data is Dummy", arr1);
+  // const arr = [1, 2, 3];
+  // let arr1 = [...arr, 4];
+  // console.log("This data is Dummy", arr1);
   return (
     <div className="p-6 space-y-6 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-center text-blue-700">
