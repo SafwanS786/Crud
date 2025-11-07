@@ -30,7 +30,7 @@ function App() {
             <div className="fixed top-1/2 right-6 -translate-y-1/2 z-50">
               <Togglebtn />
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row w-full">
               <div className="">
                 <div className="lg:p-3 xl:p-4">
                   <Routes>

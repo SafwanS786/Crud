@@ -44,3 +44,8 @@ student.forEach((n) => {
 
 // localStorage.setItem("PrcTask", JSON.stringify(student))
 
+const arr = [1, 2, 3, 4, 5, 6]
+const sl = arr.slice(0, 3)
+console.log('Array', sl)
+
+// cd D:\Ziaat_Project\src\component\Task

@@ -6,9 +6,9 @@ import AddName from "../component/Task/AddName";
 export default function TaskPages() {
   return (
     <div>
-      <UserTask />
+      {/* <UserTask /> */}
       {/* <Prc /> */}
-      <ArrayPractise />
+      {/* <ArrayPractise /> */}
       <AddName />
     </div>
   );

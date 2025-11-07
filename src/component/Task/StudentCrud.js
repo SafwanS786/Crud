@@ -1,5 +1,9 @@
 // 1️⃣ Start with:
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
 
+const name = prompt("Enter Name:");
+const age = Number(prompt("Enter Age:"));
 let student = [];
 
 // Create a function addStudent(name) that adds a new object {id, name} to students.
@@ -13,32 +17,33 @@ const AddStudent = (name, age) => {
     student.push(newStudent)
 }
 
-AddStudent("Shaikh", 20)
-AddStudent("Safwan", 23)
+AddStudent(name, age)
+console.log('The Student Details', typeof (student))
+// AddStudent("Safwan", 23)
 
 // console.log("All Students:", student);
 
 // 3️⃣ Create a function getStudents() that logs all students.
 
-const getStudents = () => {
-    console.log('All Student', student)
-}
-getStudents();
+// const getStudents = () => {
+//     console.log('All Student', student)
+// }
+// getStudents();
 
 //4️⃣ Create a function editStudent(id, newName) that updates student’s name using .map().
-const Editdata = (id, newname) => {
+// const Editdata = (id, newname) => {
 
-    let updateName = student.map((s) => {
-        if (s.id === id) {
-            return { ...s, name: newname }
-        }
-        else {
-            return s
-        }
-    })
-    console.log('The Newname is:', updateName)
-}
-Editdata(1, "Hamza");
+//     let updateName = student.map((s) => {
+//         if (s.id === id) {
+//             return { ...s, name: newname }
+//         }
+//         else {
+//             return s
+//         }
+//     })
+//     console.log('The Newname is:', updateName)
+// }
+// Editdata(1, "Hamza");
 
 // 5️⃣ Create a function deleteStudent(id) that removes student using .filter().
 // working but without Function
@@ -48,8 +53,8 @@ Editdata(1, "Hamza");
 //     })
 // console.log('Delete', deleteStudent)
 // console.log('StudentRemainsAfterDelete', student)
-const deleteStd = (id) => {
-    let dStudent = student.filter((d) => d.id !== id)
-    console.log('Delete Item', dStudent)
-};
-deleteStd(2);
+// const deleteStd = (id) => {
+//     let dStudent = student.filter((d) => d.id !== id)
+//     console.log('Delete Item', dStudent)
+// };
+// deleteStd(2);
