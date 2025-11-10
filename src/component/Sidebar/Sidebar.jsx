@@ -96,7 +96,7 @@ export default function Sidebar() {
             lg:translate-x-0 flex flex-col bg-amber-600 h-screen 
            `}
       >
-        {console.log("Done", isopen)}
+        {/* {console.log("Done", isopen)} */}
         {/* Close Button - Mobile Only */}
         <div className="p-2 lg:hidden flex justify-end">
           <button onClick={closeSidebar}>

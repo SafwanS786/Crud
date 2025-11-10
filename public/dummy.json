@@ -1,0 +1,242 @@
+[
+  {
+    "title": "New Tech Park opens in Gujarat",
+    "description": "A new IT hub is launched to boost innovation.",
+    "pubDate": "2025-11-10",
+    "source_id": "Times of India",
+    "image_url": "https://images.indianexpress.com/2022/06/T-Hub-1.jpg?w=414",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Ahmedabad Metro Expansion Approved",
+    "description": "Government approves phase 3 of Ahmedabad Metro.",
+    "pubDate": "2025-11-09",
+    "source_id": "Economic Times",
+    "image_url": "data:image/jpeg;base64,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",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Surat Diamond Market Reaches Record Sales",
+    "description": "Exporters celebrate as Surat's diamond market hits all-time high.",
+    "pubDate": "2025-11-08",
+    "source_id": "Business Standard",
+    "image_url": "data:image/jpeg;base64,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",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Vadodara Smart City Initiative Expands",
+    "description": "The city introduces 100 new electric buses under the smart city plan.",
+    "pubDate": "2025-11-07",
+    "source_id": "Hindustan Times",
+    "image_url": "https://i.ytimg.com/vi/-Mm7NZZgHqI/maxresdefault.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Rajkot Startup Wins National Innovation Award",
+    "description": "A young startup from Rajkot wins recognition for clean energy solutions.",
+    "pubDate": "2025-11-06",
+    "source_id": "The Hindu",
+    "image_url": "https://png.pngtree.com/png-clipart/20250205/original/pngtree-the-word-startup-with-a-cloud-of-colors-symbolizing-creativity-and-png-image_20326128.png",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Gandhinagar to Host Global Investors Summit 2025",
+    "description": "Over 50 countries to participate in the Vibrant Gujarat Summit.",
+    "pubDate": "2025-11-05",
+    "source_id": "NDTV",
+    "image_url": "https://images.bhaskarassets.com/thumb/360x0/web2images/1884/2025/02/20/14pic10-preparations-for-the-global-investors-summ_1740043863.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Heavy Rainfall Predicted in South Gujarat",
+    "description": "IMD issues alert for Surat, Navsari and Valsad districts.",
+    "pubDate": "2025-11-04",
+    "source_id": "Weather Today",
+    "image_url": "https://kj1bcdn.b-cdn.net/media/101613/weather-news-2.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Statue of Unity Celebrates 7th Anniversary",
+    "description": "Tourists flock to Kevadia to mark the event with cultural programs.",
+    "pubDate": "2025-11-03",
+    "source_id": "ANI",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9vlhTSEQlAeBKniigEYwyv9cPJMTj3BQag&s",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Ahmedabad Airport Expansion Nears Completion",
+    "description": "The new terminal aims to handle 2 crore passengers annually.",
+    "pubDate": "2025-11-02",
+    "source_id": "Times Now",
+    "image_url": "https://assets-news.housing.com/news/wp-content/uploads/2023/12/07172536/ahmedabad-airport-f-686x400.png",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Kutch Solar Park Adds 500 MW Capacity",
+    "description": "The world's largest renewable energy park expands its production.",
+    "pubDate": "2025-11-01",
+    "source_id": "The Economic Times",
+    "image_url": "https://images.indianexpress.com/2022/06/T-Hub-1.jpg?w=414",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Gujarat's Cotton Export Booms",
+    "description": "Farmers benefit from increased global demand for Indian cotton.",
+    "pubDate": "2025-10-31",
+    "source_id": "Business Line",
+    "image_url": "https://m.media-amazon.com/images/I/71Uj2j9opjL.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "New AI Lab Launched at Nirma University",
+    "description": "The lab will focus on AI-driven healthcare research.",
+    "pubDate": "2025-10-30",
+    "source_id": "India Today",
+    "image_url": "https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/sites/52/2021/12/PXL_20211030_064634854-scaled.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Bhavnagar Port Sees Record Cargo Handling",
+    "description": "Officials report a 25% growth in port activity this year.",
+    "pubDate": "2025-10-29",
+    "source_id": "Zee News",
+    "image_url": "https://www.logisticsinsider.in/wp-content/uploads/2023/07/Ports.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Gir Forest Tiger Population Increases",
+    "description": "Forest officials confirm healthy growth in wildlife count.",
+    "pubDate": "2025-10-28",
+    "source_id": "Nature India",
+    "image_url": "https://c.ndtvimg.com/2020-04/ql08q4lg_tigers-generic_625x300_17_April_20.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "ISRO Successfully Tests Rocket Engine in Ahmedabad",
+    "description": "The test marks a major milestone in India's space research program.",
+    "pubDate": "2025-10-27",
+    "source_id": "ISRO News",
+    "image_url": "https://img-cdn.publive.online/fit-in/1200x675/odishatv/media/post_attachments/uploadimage/library/16_9/16_9_0/ISRO__1642751563.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Surat Textile Industry Goes Green",
+    "description": "Factories shift to solar-powered operations to cut carbon footprint.",
+    "pubDate": "2025-10-26",
+    "source_id": "Textile Today",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDT3sOMK_m_S7byLEKX50eewHQS9iQCxa7vQ&s",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Ahmedabad Marathon Draws 20,000 Runners",
+    "description": "Athletes from 15 countries participate in the annual event.",
+    "pubDate": "2025-10-25",
+    "source_id": "Sports Keeda",
+    "image_url": "https://thebridge.in/h-upload/2023/11/26/1500x900_51456-ahmedabad-marathon.webp",
+    "link": "https://example.com"
+  },
+  {
+    "title": "New Riverfront Project Planned in Vadodara",
+    "description": "The project aims to beautify and restore the Vishwamitri River.",
+    "pubDate": "2025-10-24",
+    "source_id": "Hindustan Times",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDteEUflwtIb8gGb-9GthmAK0MFRkJrOyVjjA8U60AJWwiyYGwnIJkwB-FpjIKy991zp_YjIOCyA3oELSRp-Tie-9jGQ78m7kvu7fMfPxMFVMXwsW-ZT9WgRxvhXU9hGRadWZA5DAoxmtr/w1200-h630-p-k-no-nu/riverfront.jpg",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Gujarat Tourism Revenue Crosses ₹10,000 Cr",
+    "description": "Tourism Department reports strong post-pandemic recovery.",
+    "pubDate": "2025-10-23",
+    "source_id": "Mint",
+    "image_url": "https://bsmedia.business-standard.com/_media/bs/img/misc/2022-09/30/full/image-1664519581-08093380.jpg?im=FeatureCrop,size=(826,465)",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Navratri Festival Boosts Local Economy",
+    "description": "Garba nights generate business worth ₹500 crore across Gujarat.",
+    "pubDate": "2025-10-22",
+    "source_id": "TOI",
+    "image_url": "https://media.assettype.com/outlooktraveller%2F2024-10-10%2F0vhyq4ng%2Fshutterstock2478370111.jpg?w=640&auto=format%2Ccompress",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Surat Airport to Get International Flights",
+    "description": "New routes to Dubai and Singapore expected soon.",
+    "pubDate": "2025-10-21",
+    "source_id": "LiveMint",
+    "image_url": "https://suratupdates.com/wp-content/uploads/2025/02/Surat_International_Airport-1200x675.webp",
+    "link": "https://example.com"
+  },
+  {
+    "title": "New IT Policy Announced by Gujarat Govt",
+    "description": "Focus on startups, AI, and blockchain technology.",
+    "pubDate": "2025-10-20",
+    "source_id": "TechCrunch",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Bhuj Museum Opens New Science Wing",
+    "description": "A modern section showcasing ancient innovations inaugurated.",
+    "pubDate": "2025-10-19",
+    "source_id": "Heritage India",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Rajkot Hosts National Robotics Challenge",
+    "description": "Students from 20 states compete in automation tasks.",
+    "pubDate": "2025-10-18",
+    "source_id": "Education Times",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Ahmedabad Zoo Adds New Species",
+    "description": "Two rare bird species added to Kamla Nehru Zoological Garden.",
+    "pubDate": "2025-10-17",
+    "source_id": "The Print",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Gujarat EV Adoption Reaches New Heights",
+    "description": "State records 1 lakh EV registrations this year.",
+    "pubDate": "2025-10-16",
+    "source_id": "AutoCar India",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "New Film Studio Announced in Dholera",
+    "description": "Bollywood producers plan to build modern film infrastructure.",
+    "pubDate": "2025-10-15",
+    "source_id": "Film Companion",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Ahmedabad University Launches AI Degree Program",
+    "description": "The course focuses on real-world applications of machine learning.",
+    "pubDate": "2025-10-14",
+    "source_id": "India Today",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Vadodara Railway Station Becomes Solar Powered",
+    "description": "All platforms now run on renewable energy sources.",
+    "pubDate": "2025-10-13",
+    "source_id": "Economic Times",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Kutch Handicrafts Gain Global Recognition",
+    "description": "Local artisans' products showcased at Dubai Expo.",
+    "pubDate": "2025-10-12",
+    "source_id": "Business Standard",
+    "image_url": "https://via.placeholder.com/400x250",
+    "link": "https://example.com"
+  }
+]

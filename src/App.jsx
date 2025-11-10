@@ -9,6 +9,7 @@ import Navbar from "./component/Navbar/Navbar";
 import DashboardPages from "./Pages/DashboardPages";
 import TaskPages from "./Pages/TaskPages";
 import GroupPages from "./Pages/GroupPages";
+import LessonPages from "./Pages/LessonPages";
 function App() {
   const { theme } = useTheme();
   return (
@@ -39,6 +40,7 @@ function App() {
                     <Route path="/dashboard" element={<DashboardPages />} />
                     <Route path="/task" element={<TaskPages />} />
                     <Route path="/group" element={<GroupPages />} />
+                    <Route path="/lesson" element={<LessonPages />} />
                   </Routes>
                 </div>
               </div>
