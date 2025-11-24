@@ -8,9 +8,7 @@ export default function GroupPages() {
     <div>
       <div
         className={
-          theme === "dark"
-            ? "bg-gray-950 text-white min-h-screen"
-            : "bg-white text-black min-h-screen"
+          theme === "dark" ? "bg-gray-950 text-white " : "bg-white text-black "
         }
       >
         <ApiExample theme={theme} />

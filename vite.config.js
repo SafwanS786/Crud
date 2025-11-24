@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: "0.0.0.0", // expose to network (all IPs)
-    port: 5174       // you can change if you want
+    port: 5175       // you can change if you want
   }
 })

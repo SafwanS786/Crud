@@ -1,13 +1,12 @@
 import React from "react";
 import Sidebar from "../component/Sidebar/Sidebar";
-import Navbar from "../component/Navbar/Navbar";
-export default function ConnectionPages() {
+import { useTheme } from "../Context/ThemeContext";
+export default function ConnectionPages({ children }) {
+  const { theme } = useTheme();
   return (
     <>
-      <Sidebar />
-      <div className="">
-        
-      </div>
+      <Sidebar theme={theme} />
+      <div className="lg:p-4 overflow-y-auto  h-screen">{children}</div>
     </>
   );
 }

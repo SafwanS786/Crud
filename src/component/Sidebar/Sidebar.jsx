@@ -15,7 +15,7 @@ import Ellipse_Img from "../../assets/img/Ellipse.png";
 import Ellipse_Img1 from "../../assets/img/Ellipse1.png";
 import { useSidebar } from "../../Context/SidebarContext";
 import { NavLink, useNavigate } from "react-router-dom";
-export default function Sidebar() {
+export default function Sidebar({ theme }) {
   const navigate = useNavigate();
   const { isopen, closeSidebar } = useSidebar(); // ✅ use context
   // const [isopen, setIsopen] = useState(false);
@@ -89,12 +89,16 @@ export default function Sidebar() {
         //   transform transition-transform duration-300 ease-in-out rounded-2xl
         //   ${isopen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0
         //   flex flex-col bg-amber-600 h-screen `}
-        className={`fixed w-64 lg:static mt-16 md:m-0 font-primary inset-y-0 left-0 z-40 bg-white
+        className={`fixed min-w-64 lg:static mt-16 lg:mt-0 font-primary inset-y-0 left-0 z-40 
            text-gray-800  transform transition-transform duration-300 ease-in-out shadow-lg flex flex-col ${
              isopen ? "translate-x-0" : "-translate-x-full"
            }  
-            lg:translate-x-0 flex flex-col bg-amber-600 h-screen 
-           `}
+            lg:translate-x-0 flex flex-col h-screen 
+             ${
+               theme === "light"
+                 ? "bg-white text-gray-800"
+                 : "text-white bg-[#01081d] border-r border-r-[#1d2939]"
+             }`}
       >
         {/* {console.log("Done", isopen)} */}
         {/* Close Button - Mobile Only */}
@@ -115,7 +119,13 @@ export default function Sidebar() {
           >
             <div className="flex items-center gap-3 mb-8">
               <School className="w-8 h-8 text-purple-600" />
-              <h1 className="text-2xl font-bold text-gray-800">Coursue</h1>
+              <h1
+                className={`text-2xl font-bold ${
+                  theme === "light" ? " text-gray-800" : "text-white "
+                }`}
+              >
+                Coursue
+              </h1>
             </div>
           </button>
 
@@ -166,7 +176,7 @@ export default function Sidebar() {
               {setting.map((s, i) => (
                 <button
                   key={i}
-                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 hover:text-white dark:hover:bg-gray-800 transition cursor-pointer"
                 >
                   <s.icon className="w-5 h-5" />
                   <span>{s.Head}</span>

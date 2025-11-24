@@ -1,69 +1,6 @@
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// export default function DummyAPI() {
-//   const [dummydata, setDummydata] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   useEffect(() => {
-//     const DummyDatatest = async () => {
-//       try {
-//         let data = "/dummy.json";
-//         const response = await axios.get(data);
-//         let d = response.data;
-//         setDummydata(d);
-//       } catch (error) {
-//         console.log("❌ Error Fetching data is Not There", error);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-//     DummyDatatest();
-//   }, []);
-//   return (
-//     <div>
-//       <h1 className="text-2xl text-gray-500 font-bold">Dummy Data</h1>
-//       {loading ? (
-//         <p>Loading ....</p>
-//       ) : (
-//         <div className="grid grid-cols-3 gap-8 ">
-//           {dummydata.map((item, i) => {
-//             return (
-//               <div
-//                 key={i}
-//                 className="border border-[#f2f2f2] shadow-2xl rounded-2xl p-3 my-2"
-//               >
-//                 {/* <div>
-//                   <h1>{item.title}</h1>
-//                 </div> */}
-//                 <div className="">
-//                   <div className="">
-//                     <h2 className="font-semibold">{item.title}</h2>
-//                     <p>{item.description}</p>
-//                     <small>{item.pubDate}</small>
-//                     <p>Source: {item.source_id}</p>
-//                     <img
-//                       src={item.image_url}
-//                       alt={item.title}
-//                       className="w-64 h-40 object-cover my-2 rounded"
-//                     />
-//                     <a
-//                       href={item.link}
-//                       target="_blank"
-//                       rel="noopener noreferrer"
-//                     >
-//                       Read more →
-//                     </a>
-//                   </div>
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import dummy from "../../../public/dummy.json";
 import {
   Newspaper,
   Clock,
@@ -74,13 +11,19 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 
-export default function DummyAPI() {
+export default function DummyAPI({ theme }) {
   const [dummydata, setDummydata] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [curpage, setCurpage] = useState(1);
-  const item = 6;
+  const [items, setItem] = useState(6);
+  const item = items;
+  const TotalPages = Math.ceil(dummydata.length / item);
 
+  const handleItem = (e) => {
+    setItem(Number(e.target.value));
+    setCurpage(1);
+  };
   let LastIndex = curpage * item;
   let FirstIndex = LastIndex - item;
   useEffect(() => {
@@ -95,6 +38,7 @@ export default function DummyAPI() {
         const data = "/dummy.json";
         const response = await axios.get(data);
         setDummydata(response.data);
+        console.log("Dummny", dummydata);
         setError(null);
       } catch (error) {
         console.log("❌ Error Fetching data", error);
@@ -107,6 +51,11 @@ export default function DummyAPI() {
   }, []);
 
   // Format date
+  // useEffect(() => {
+  //   setDummydata(dummy);
+  // });
+
+  console.log("Dummny", dummy);
   const formatDate = (dateString) => {
     if (!dateString) return "Date not available";
     const date = new Date(dateString);
@@ -118,7 +67,9 @@ export default function DummyAPI() {
       minute: "2-digit",
     });
   };
-
+  useEffect(() => {
+    console.log("DummyData Length", dummy.length);
+  }, []);
   // Loading State
   if (loading) {
     return (
@@ -156,7 +107,13 @@ export default function DummyAPI() {
   return (
     <div className="min-h-screen bg-linear-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Header Section */}
-      <header className="bg-white/80 backdrop-blur-md shadow-lg border-b border-indigo-100 sticky top-0 z-50">
+      <header
+        className={`bg-white/80 backdrop-blur-md shadow-lg border-b border-indigo-100 sticky top-0 z-50 ${
+          theme === "light"
+            ? "text-gray-900 hover:bg-gray-50"
+            : "text-white hover:bg-gray-600"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -164,11 +121,17 @@ export default function DummyAPI() {
                 <Newspaper className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-4xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                <h1
+                  className={`text-4xl font-bold bg-linear-to-r  bg-clip-text text-transparent ${
+                    theme === "light"
+                      ? "from-indigo-600 to-purple-600"
+                      : "from-fuchsia-400 to-cyan-400"
+                  }`}
+                >
                   Content Hub
                 </h1>
                 <p className="text-slate-600 text-sm mt-1 font-medium">
-                  Discover amazing stories • {dummydata.length} articles
+                  Discover amazing stories • {dummy.length} articles
                 </p>
               </div>
             </div>
@@ -196,7 +159,7 @@ export default function DummyAPI() {
                   Total Articles
                 </p>
                 <p className="text-2xl font-bold text-slate-900">
-                  {dummydata.length}
+                  {dummy.length}
                 </p>
               </div>
             </div>
@@ -229,7 +192,7 @@ export default function DummyAPI() {
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {dummydata.slice(FirstIndex, LastIndex).map((item, i) => (
+          {dummy.slice(FirstIndex, LastIndex).map((item, i) => (
             <article
               key={i}
               className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-indigo-200 hover:-translate-y-2"
@@ -307,8 +270,10 @@ export default function DummyAPI() {
         </div>
 
         {/* Empty State */}
-        {dummydata.length === 0 && !loading && (
+        {dummy.length === 0 && !loading && (
           <div className="text-center py-20">
+            {console.log("DummyData Length", dummy.length)}
+            {/* console.log('object') */}
             <div className="bg-white/90 backdrop-blur rounded-3xl shadow-2xl p-12 max-w-md mx-auto">
               <Newspaper className="w-24 h-24 text-slate-300 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-slate-700 mb-3">
@@ -320,13 +285,53 @@ export default function DummyAPI() {
             </div>
           </div>
         )}
-        <div className="flex justify-center mt-10 gap-2">
+        <div className="flex justify-end items-center mt-10 gap-2">
+          <div className="bg-white px-2 border rounded-md flex justify-center py-1">
+            <select
+              name="value"
+              id="num"
+              onChange={handleItem}
+              value={items}
+              className="border border-white rounded-md"
+            >
+              <option value="6">6</option>
+              <option value="9">9</option>
+              <option value="12">12</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+          {/* <div className="flex gap-2 mt-4 justify-center">
+            {Array.from({ length: TotalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurpage(i + 1)}
+                className={`px-3 py-1 rounded-md ${
+                  curpage === i + 1
+                    ? "bg-sky-600 text-white"
+                    : "bg-gray-200 text-gray-800"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div> */}
           <button
             onClick={() => setCurpage((prev) => Math.max(prev - 1, 1))}
             disabled={curpage === 1}
             className="px-4 py-2 bg-sky-500 text-white rounded-lg disabled:bg-gray-400 cursor-pointer"
           >
             prev
+          </button>
+
+          <span className="text-gray-700 font-medium">Page{curpage}</span>
+          <button
+            onClick={() =>
+              setCurpage((prev) => Math.ceil(prev + 1, TotalPages))
+            }
+            disabled={curpage === TotalPages}
+            className="px-4 py-2 bg-sky-500 text-white rounded-lg disabled:bg-gray-400 cursor-pointer"
+          >
+            Next
           </button>
         </div>
       </main>

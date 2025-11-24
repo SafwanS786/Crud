@@ -8,10 +8,10 @@ import {
   EllipsisVertical,
   Workflow,
 } from "lucide-react";
-import { useTheme } from "../../../src/Context/ThemeContext";
+// import { useTheme } from "../../../src/Context/ThemeContext";
 
-export default function Video() {
-  const { theme, ToggleTheme } = useTheme();
+export default function Video({ theme }) {
+  // const { theme, ToggleTheme } = useTheme();
   const Data = [
     {
       icon: Demo,
@@ -49,7 +49,11 @@ export default function Video() {
         {Data.map((value, index) => (
           <div
             key={index}
-            className="flex  flex-col border border-[#f2f2f2] rounded-2xl bg-white p-2 lg:p-4"
+            className={`flex flex-col rounded-2xl p-2 lg:p-4 ${
+              theme === "light"
+                ? "border border-[#f2f2f2] bg-white"
+                : "bg-[#01081d] border border-[#1d2939]"
+            }`}
           >
             <div>
               <img
@@ -67,11 +71,23 @@ export default function Video() {
                 <value.icon1 className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
               </div>
               <div>
-                <h2 className="text-xs md:text-sm">{value.Head}</h2>
+                <h2
+                  className={`text-xs md:text-sm ${
+                    theme === "light" ? "text-black" : "text-gray-600"
+                  }`}
+                >
+                  {value.Head}
+                </h2>
               </div>
             </div>
             <div className="mt-2 w-60">
-              <h1 className="text-sm md:text-base font-bold">{value.Head1}</h1>
+              <h1
+                className={`text-sm md:text-base font-bold ${
+                  theme === "light" ? "text-black" : "text-white"
+                }`}
+              >
+                {value.Head1}
+              </h1>
             </div>
           </div>
         ))}

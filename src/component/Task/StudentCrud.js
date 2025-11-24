@@ -96,3 +96,16 @@ let cnt = Math.max(...a)
 console.log('Max', cnt)
 let see = Math.max([1, 2, 3, 9, 4, 5, 7, 6]);
 console.log('See', see)
+
+
+let chk = Math.ceil(3.4)
+console.log('Check', chk)
+
+let f = Math.max(30, 4)
+console.log('For Check', f)
+let f1 = Math.min(30, 4)
+console.log('For Min Check', f1)
+
+let prev = 5;
+let pch = Math.max(prev - 1, prev);
+console.log('Prev', pch)

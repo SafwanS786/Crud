@@ -6,7 +6,7 @@ import {
   EllipsisVertical,
 } from "lucide-react";
 
-export default function Card() {
+export default function Card({ theme }) {
   const Card_data = [
     {
       icon: PencilRuler,
@@ -37,7 +37,11 @@ export default function Card() {
           return (
             <div
               key={idx}
-              className="border border-[#f2f2f2] bg-white  p-2 rounded-lg sm:rounded-xl sm:p-3 md:p-2 lg:p-4 md:rounded-3xl"
+              className={`p-2 rounded-lg sm:rounded-xl sm:p-3 md:p-2 lg:p-4 md:rounded-3xl ${
+                theme === "light"
+                  ? "border border-[#f2f2f2] bg-white"
+                  : "bg-[#01081d] border border-[#1d2939]"
+              }`}
             >
               <div className="flex flex-row items-center justify-between gap-4">
                 <div className="flex flex-row gap-4 items-center justify-center">
@@ -52,7 +56,11 @@ export default function Card() {
                       <span className="text-[#8B8B8B] text-xs sm:text-base">
                         {item.Title}
                       </span>
-                      <h1 className="font-semibold md:font-bold text-sm sm:text-base">
+                      <h1
+                        className={`font-semibold md:font-bold text-sm sm:text-base ${
+                          theme === "light" ? "text-black" : "text-white"
+                        }`}
+                      >
                         {item.Head}
                       </h1>
                     </div>

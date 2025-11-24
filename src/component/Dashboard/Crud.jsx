@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function StudentCRUD() {
+export default function StudentCRUD({ theme }) {
   const [students, setStudents] = useState([]);
   const [editdata, setEditdata] = useState(null); // { id, ...data }
   const [newStudent, setNewStudent] = useState({
@@ -103,12 +103,22 @@ export default function StudentCRUD() {
   // console.log("This data is Dummy", arr1);
   return (
     <div className="p-6 space-y-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center text-blue-700">
+      <h5
+        className={`text-xl font-bold text-center ${
+          theme === "light" ? "text-blue-700" : "text-white"
+        } `}
+      >
         Student Management CRUD
-      </h1>
+      </h5>
 
       {/* FORM */}
-      <div className="border p-6 rounded-lg shadow-lg bg-white">
+      <div
+        className={`border p-6 rounded-lg shadow-lg  ${
+          theme === "light"
+            ? "text-gray-500 border border-[#f2f2f2]"
+            : "text-white border border-[#1d2939]"
+        }`}
+      >
         <h2 className="font-semibold text-xl mb-4">
           {editdata ? "Edit Student" : "Add New Student"}
         </h2>
@@ -123,7 +133,11 @@ export default function StudentCRUD() {
                 placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                 value={newStudent[field]}
                 onChange={handleChange}
-                className="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  ${
+                  theme === "light"
+                    ? "text-black border"
+                    : "text-white border border-[#1d2939]"
+                }`}
               />
             )
           )}
@@ -175,7 +189,14 @@ export default function StudentCRUD() {
               </tr>
             ) : (
               students.map((s) => (
-                <tr key={s.id} className="hover:bg-gray-50">
+                <tr
+                  key={s.id}
+                  className={` ${
+                    theme === "light"
+                      ? "text-gray-900 hover:bg-gray-50"
+                      : "text-white hover:bg-gray-600"
+                  }`}
+                >
                   <td className="p-3 border">{s.id}</td>
                   <td className="p-3 border">{s.name}</td>
                   <td className="p-3 border">{s.university}</td>
